@@ -1,0 +1,45 @@
+/* Container for the image layout */
+.image-container {
+    display: grid;
+    grid-template-areas:
+      "image1 image2"
+      "image1 image3";
+    grid-template-columns: 60% 30%; /* Image 1 takes 60%, Image 2 and 3 take the remaining 40% */
+    grid-template-rows: 50% 50%; /* Divide the remaining space equally between image 2 and image 3 */
+    gap: 10px;
+    width: 100%;
+    height: 400px; /* Flatter design with less height */
+    position: relative;
+    top: 1em;
+    left: 3em;
+    overflow: hidden; /* Prevents images from overflowing */
+  }
+  
+  /* Individual image styles */
+  .image-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Image styles to ensure they scale within their grid area */
+  .image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes the image cover the container */
+  }
+  
+  /* Styling for Image 1 (Left side, 60% width) */
+  .image-1 {
+    grid-area: image1;
+  }
+  
+  /* Styling for Image 2 (Right side, Top) */
+  .image-2 {
+    grid-area: image2;
+  }
+  
+  /* Styling for Image 3 (Right side, Bottom) */
+  .image-3 {
+    grid-area: image3;
+  }
+  

@@ -1,38 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header-container {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #16afa7;
+  margin: 0;
+  text-align: left;
+}
+
+.header-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.header-nav-button {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header-nav-button:hover {
+  color: #16afa7;
+}
+
+.header-nav-button.active {
+  color: #16afa7;
+}
+
+@media (max-width: 768px) {
+  .header-flex-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.payment-order-summary-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.payment-form-container,
+.order-summary {
+  width: 48%;
+}
+
+.footer {
+  background-color: #16afa7;
+  color: white;
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer-container p {
+  margin: 5px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="text"] {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #ccc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.submit-button {
+  position:relative ;
+  top: 0.4em;
+  left: 0.2em;
+  background-color: #16afa7;
   color: white;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 200px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.submit-button:hover {
+  background-color: #14a18b;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.radio-group {
+  display: flex;
+  gap: 10px;
+}
+
+.radio-item {
+  font-size: 1rem;
 }
