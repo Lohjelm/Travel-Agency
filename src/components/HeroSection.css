@@ -1,0 +1,61 @@
+
+
+
+
+body {
+  background-color: #faf8f8;
+  justify-content: center;
+  min-height: 0vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.hero-section {
+  
+  background-image: url('../assets/hero6.jpg');
+  background-size: cover;
+  
+  padding: 150px 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat; 
+  
+}
+
+.search-input {
+ 
+  padding:  10px ;
+  font-size: 16px;
+ 
+  padding-right: 270px; 
+  border-radius: 20px; 
+  border-color: #080808;
+ 
+} 
+
+
+.search-bar button {
+ 
+  padding: 10px;
+  background-color:#ed6226;
+  color: #fcf7f7;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: serif;
+  
+ 
+ 
+}
+.search-bar :hover{
+  color: #0c0c0c;
+}
+
+
+
+
+  
